@@ -1,0 +1,52 @@
+{
+  "name": "levelDB",
+  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN)",
+  "version": "4.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Level/level.git"
+  },
+  "homepage": "https://github.com/Level/level",
+  "keywords": [
+    "leveldb",
+    "stream",
+    "database",
+    "db",
+    "store",
+    "storage",
+    "json"
+  ],
+  "main": "level.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "connect": "^3.6.6",
+    "level": "^4.0.0",
+    "level-packager": "^4.0.0",
+    "leveldown": "^4.0.1",
+    "levelup": "^3.1.1",
+    "mongodb": "^3.1.10",
+    "opencollective-postinstall": "^2.0.0",
+    "tingodb": "^0.6.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nyc": "^12.0.2",
+    "standard": "^12.0.0",
+    "tape": "^4.2.2",
+    "verify-travis-appveyor": "^3.0.0"
+  },
+  "scripts": {
+    "test": "standard && nyc node test.js && verify-travis-appveyor",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "postinstall": "opencollective-postinstall || exit 0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/level",
+    "logo": "https://opencollective.com/level/logo.txt"
+  }
+}
