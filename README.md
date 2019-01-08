@@ -1,5 +1,6 @@
 
-Authors: Brian Xu, Gerard Devlin, Varun Malikayil 2018-12-6
+Author: Brian Xu
+2018-12-6
 
 ## Summary
  In this quest, we were tasked with implementing a smart key, sercurity hub, and TingoDB database system. This system works in a way such that when the fob is put into the proximity of the security hub, the key sends an IR signal containing the fob's unique ID and password.
