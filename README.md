@@ -3,14 +3,14 @@ Author: Brian Xu
 2018-12-6
 
 ## Summary
- In this quest, we were tasked with implementing a smart key, sercurity hub, and TingoDB database system. This system works in a way such that when the fob is put into the proximity of the security hub, the key sends an IR signal containing the fob's unique ID and password.
+ In this quest, I was tasked with implementing a smart key, sercurity hub, and TingoDB database system. This system works in a way such that when the fob is put into the proximity of the security hub, the key sends an IR signal containing the fob's unique ID and password.
  This information is then compared to the correct values stored and pre-determined on the hub. From there, the hub will send the information to a Raspberry Pi, which is hosting our database of login history, as well as send an access or rejection signal back to the fob using HTTP requests. Then, an LED on the fob will be green or red, signalling successful login or rejection.
 
  Concurrently, the information sent to the database is also sent to a remote client displaying the log history of the security hub. This includes the fob ID, timestamp, password, etc.
 
 ## Evaluation Criteria
 
-We decided on the following specifications for a successful solution to this quest:
+It was decided on the following specifications for a successful solution to this quest:
 
  - Fob can send IR signal to Hub
  - Fob can receive access/rejection through network
@@ -26,7 +26,7 @@ We decided on the following specifications for a successful solution to this que
  
  
 ## Solution Design
-We used Huzzah32 boards (based on the the ESP32 board) and an RPi as the main processors in this quest. The ESP32 is interfaced to send and receive IR signals as well as host servers in our local area network. In this project, the ESP32 is used as our Fob and Hub while the RPi is used to host the database and client.
+I used Huzzah32 boards (based on the the ESP32 board) and an RPi as the main processors in this quest. The ESP32 is interfaced to send and receive IR signals as well as host servers in our local area network. In this project, the ESP32 is used as the Fob and Hub while the RPi is used to host the database and client.
 
 Fob Build Details: 
 - IR Transmitter : GPIO Pins A0 and A1. Transmits code and ID information through IR.
@@ -47,7 +47,7 @@ Solution : The hub could also require an IP address as well as the password and 
 
 Issue #2 : There is no limit to the amount of login attempts, meaning our security hub could technically be brute forced quite easily considering ID is only two digits and password is only one digit.
 
-Solution : We could increase the digit length of both ID and passowrd as well as introduce a sanity check that locks a certain ID from logging in after a certain amount of incorrect attempts.
+Solution : I could increase the digit length of both ID and passowrd as well as introduce a sanity check that locks a certain ID from logging in after a certain amount of incorrect attempts.
 
 Issue #3 : There is a lack of encryption on our database. This means if you are in our local area network, you could request the information on the database which includes all the passwords and IDs for our fobs and hubs
 
