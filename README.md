@@ -56,13 +56,13 @@ Solution : Encrypt our database!!!!
 ## Sketches and Photos
 
 <center> State Diagram :</center>
-<center><img src="./Images/state.JPG" width="50%" /></center>
+<center><img src="./Images/state.jpg" width="50%" /></center>
 
 <center> Key Fob :</center>
-<center><img src="./Images/FOB.JPG" width="50%" /></center>
+<center><img src="./Images/FOB.jpg" width="50%" /></center>
 
 <center> Security Hub (Overhead) :</center>
-<center><img src="./Images/HUB.JPG" width="50%" /></center>
+<center><img src="./Images/HUB.jpg" width="50%" /></center>
 
 <center> Client Output :</center>
 <center><img src="./Images/client.png" width="50%" /></center>
